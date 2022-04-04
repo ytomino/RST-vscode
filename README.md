@@ -1,6 +1,6 @@
 # ReStructured Text Previewer
 
-An extension to preview restructured text and provide syntax highlighting
+An extension to preview restructured text ~~and provide syntax highlighting~~
 
 The extension can be activate in two ways
 

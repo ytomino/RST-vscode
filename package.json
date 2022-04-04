@@ -242,14 +242,7 @@
 					"scope": "window"
 				}
 			}
-		},
-		"grammars": [
-			{
-				"language": "restructuredtext",
-				"path": "./syntaxes/restructuredtext.tmlanguage",
-				"scopeName": "text.restructuredtext"
-			}
-		]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
