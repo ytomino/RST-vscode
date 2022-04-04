@@ -28,7 +28,7 @@
 	],
 	"activationEvents": [
 		"workspaceContains:**/*.rst",
-		"onLanguage:rst",
+		"onLanguage:restructuredtext",
 		"onCommand:rst.preview.toggleLock",
 		"onCommand:rst.preview.refresh",
 		"onCommand:rst.showPreview",
@@ -39,19 +39,6 @@
 		"onWebviewPanel:rst.preview"
 	],
 	"contributes": {
-		"languages": [
-			{
-				"id": "rst",
-				"aliases": [
-					"RST",
-					"ReStructured Text"
-				],
-				"extensions": [
-					".rst",
-					".rest"
-				]
-			}
-		],
 		"commands": [
 			{
 				"command": "rst.showPreview",
@@ -109,7 +96,7 @@
 			"editor/title": [
 				{
 					"command": "rst.showPreviewToSide",
-					"when": "editorLangId == rst",
+					"when": "editorLangId == restructuredtext",
 					"alt": "rst.showPreview",
 					"group": "navigation"
 				},
@@ -137,31 +124,31 @@
 			"explorer/context": [
 				{
 					"command": "rst.showPreview",
-					"when": "resourceLangId == rst",
+					"when": "resourceLangId == restructuredtext",
 					"group": "navigation"
 				}
 			],
 			"editor/title/context": [
 				{
 					"command": "rst.showPreview",
-					"when": "resourceLangId == rst",
+					"when": "resourceLangId == restructuredtext",
 					"group": "navigation"
 				}
 			],
 			"commandPalette": [
 				{
 					"command": "rst.showPreview",
-					"when": "editorLangId == rst",
+					"when": "editorLangId == restructuredtext",
 					"group": "navigation"
 				},
 				{
 					"command": "rst.showPreviewToSide",
-					"when": "editorLangId == rst",
+					"when": "editorLangId == restructuredtext",
 					"group": "navigation"
 				},
 				{
 					"command": "rst.showLockedPreviewToSide",
-					"when": "editorLangId == rst",
+					"when": "editorLangId == restructuredtext",
 					"group": "navigation"
 				},
 				{
@@ -171,7 +158,7 @@
 				},
 				{
 					"command": "rst.showPreviewSecuritySelector",
-					"when": "editorLangId == rst"
+					"when": "editorLangId == restructuredtext"
 				},
 				{
 					"command": "rst.showPreviewSecuritySelector",
@@ -188,13 +175,13 @@
 				"command": "rst.showPreview",
 				"key": "shift+ctrl+v",
 				"mac": "shift+cmd+v",
-				"when": "editorLangId == rst"
+				"when": "editorLangId == restructuredtext"
 			},
 			{
 				"command": "rst.showPreviewToSide",
 				"key": "ctrl+k v",
 				"mac": "cmd+k v",
-				"when": "editorLangId == rst"
+				"when": "editorLangId == restructuredtext"
 			}
 		],
 		"configuration": {
@@ -258,7 +245,7 @@
 		},
 		"grammars": [
 			{
-				"language": "rst",
+				"language": "restructuredtext",
 				"path": "./syntaxes/restructuredtext.tmlanguage",
 				"scopeName": "text.restructuredtext"
 			}

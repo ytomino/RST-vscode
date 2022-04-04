@@ -27,7 +27,7 @@ export class RSTPreviewConfiguration {
 	private constructor(resource: vscode.Uri) {
 		const editorConfig = vscode.workspace.getConfiguration('editor', resource);
 		const rstConfig = vscode.workspace.getConfiguration('rst', resource);
-		const rstEditorConfig = vscode.workspace.getConfiguration('[rst]', resource);
+		const rstEditorConfig = vscode.workspace.getConfiguration('[restructuredtext]', resource);
 
 
 		this.scrollBeyondLastLine = editorConfig.get<boolean>('scrollBeyondLastLine', false);
