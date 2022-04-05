@@ -31,9 +31,12 @@ export async function openFile(file: string) {
 
 export async function closeActiveWindows(): Promise<any> {
   // https://github.com/Microsoft/vscode/blob/master/extensions/vscode-api-tests/src/utils.ts
-  await new Promise(async (c, e) => {
+  await new Promise(
+    async (c: (value: unknown) => void,
+    e: (reason?: any) => void
+  ) => {
     if (vscode.window.visibleTextEditors.length === 0) {
-      return c();
+      return c(null);
     }
 
     // TODO: the visibleTextEditors variable doesn't seem to be
@@ -45,14 +48,14 @@ export async function closeActiveWindows(): Promise<any> {
       }
 
       clearInterval(interval);
-      c();
+      c(null);
     }, 10);
 
     try {
       await vscode.commands.executeCommand("workbench.action.closeAllEditors");
-    } catch (e) {
+    } catch (ex) {
       clearInterval(interval);
-      e(e);
+      e(ex);
     }
   });
   assert.equal(vscode.window.visibleTextEditors.length, 0);

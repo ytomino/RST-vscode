@@ -31,7 +31,7 @@ export class RSTEngine {
     try {
       return this.compile(doc.fileName, doc.uri);
     } catch (e) {
-      return this.errorSnippet(e.toString());
+      return this.errorSnippet(String(e));
     }
   }
 }
