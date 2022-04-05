@@ -157,9 +157,7 @@ export class RSTContentProvider {
 
 	private getStyles(resource: vscode.Uri, nonce: string, config: RSTPreviewConfiguration): string {
 		const fix = (href: string) =>
-		  vscode.Uri.file(href)
-			.with({ scheme: "vscode-resource" })
-			.toString();
+			this.extensionResourcePath(href);
 		const baseStyles = config.baseStyles
 		  .map(
 			href => `<link rel="stylesheet" type="text/css" href="${fix(href)}">`
