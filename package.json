@@ -250,7 +250,6 @@
 		"build-ext": "npx tsc -p ./tsconfig.json",
 		"build-preview": "./node_modules/.bin/webpack-cli",
 		"watch": "npx tsc -watch -p ./tsconfig.json",
-		"postinstall": "node ./node_modules/vscode/bin/install",
 		"test": "npm run compile && node ./node_modules/vscode/bin/test",
 		"preversion": "npm run compile",
 		"version": "./node_modules/.bin/changes",
